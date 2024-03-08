@@ -1,0 +1,214 @@
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-style: normal;
+  margin: 0;
+}
+
+#pic {
+  height: 250px;
+  width: 250px;
+  border-radius: 6%;
+  left: 100%;
+  border: ridge 2px;
+  padding: 5px;
+}
+
+#name {
+  font-size: 50px;
+  font-weight: 500;
+}
+
+#Occupation {
+  font-size: 30px;
+  color: rgb(37, 70, 255);
+}
+
+.cont
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 5%;
+}
+
+.cont1
+{
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+}
+
+.cont2 {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 7px;
+}
+
+.cont3 {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 30px;
+}
+
+.cont4 {
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+  gap: 20px;
+}
+
+.cont5 {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-left: 50px;
+}
+
+.cont6 {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+hr {
+  border-radius: 50%;
+  width: 100%;
+}
+
+.h2 {
+  font-size: 50px;
+  font-weight: 500;
+}
+
+.head1 {
+  font-size: 25px;
+  color: rgb(37, 70, 255);
+  font-style: oblique;
+}
+
+.head2 {
+  padding-left: 30px;
+  font-size: 18px;
+}
+
+.main_cont {
+  display: flex;
+  direction: row;
+  justify-content: space-around;
+}
+
+.h_cont {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.m_cont {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.h1
+{
+    font-size: x-large;
+    font-weight: 600;
+    color: rgb(11, 144, 221);
+}
+
+.main_cont .h_cont li ,
+.main_cont .m_cont li
+{
+  margin-left: 40px;
+}
+
+.main_cont .h_cont .h1,
+.main_cont .h_cont .h2
+{
+  margin-top: 10px;
+  margin-bottom: 10px;  
+}
+
+.main_cont .h_cont .h1
+{
+  margin-left: 40px;
+}
+
+a {
+  color: #000102; 
+  transition: color 0.3s ease; 
+  text-decoration: underline 0.5px;
+}
+
+a:hover {
+  color: #00a2ff; 
+  text-decoration: underline 0.5px; 
+}
+
+
+/* Styles for larger screens */
+@media only screen and (min-width: 768px) {
+  #pic {
+    height: 250px;
+    width: 250px;
+  }
+}
+
+/* Styles for medium-sized screens */
+@media only screen and (max-width: 767px) {
+  #pic {
+    height: 200px;
+    width: 200px;
+  }
+
+  .cont {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cont2,
+  .cont6 {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .cont3,
+  .cont5 {
+    margin-left: 0;
+  }
+
+  .main_cont {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .h_cont {
+    width: 100%;
+  }
+
+  .main_cont .h_cont li,
+  .main_cont .m_cont li {
+    margin-left: 0;
+  }
+
+  .head2 {
+    padding-left: 0;
+  }
+}
+
+/* Styles for smaller screens */
+@media only screen and (max-width: 480px) {
+  #pic {
+    height: 150px;
+    width: 150px;
+  }
+
+  .cont3,
+  .cont5 {
+    margin-left: 10px;
+  }
+}
