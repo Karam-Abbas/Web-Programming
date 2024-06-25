@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form class="enter_task_area"  action="/create" method="post">
+      <input type="text" placeholder="Task Title" id="title" name="task"/>
+      <textarea placeholder="Task Details" id="details" name="details"></textarea>
+      <button type="submit" id="btn">Create Task</button>
+    </form>
+
+    <div class="task_show_area">
+      <% if(files.length>0){ %> <% files.forEach((val)=>{ %>
+      <div class="card">
+        <h1><%= val %></h1>
+        <a href="/files/<%= val %>">Read More</a>
+      </div>
+      <% }) %> <% }else{ %>
+      <h3>No tasks yet.</h3>
+      <% } %>
+    </div>
+
+    <script src="/javascripts/script.js"></script>
+  </body>
+</html>
