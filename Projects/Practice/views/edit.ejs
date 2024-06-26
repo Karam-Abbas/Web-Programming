@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <form class="enter_task_area" action="/edit" method="post">
+        <input type="text" placeholder="Previous Name" class="title" name="prev" value="<%= fileName %>"/>
+        <input type="text" placeholder="New Name" class="title" name="new"/>
+      <div class="cont2">
+        <button type="submit" id="btn-2">Update Name</button>
+        <a href="/" id="btn">Back To Home</a>
+    </div>
+    </form>
+</body>
+</html>
