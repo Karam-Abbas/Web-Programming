@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index.js</title>
+</head>
+<body>
+    <div class="nav">
+        <a href="/read" id="read">Read Users</a>
+    </div>
+    <form class="main" method="post" action="/edit/<%= user._id %>">
+        <p>Update User</p>
+        <div class="sub">
+            <input placeholder="Updated Name" type="text" name="name" class="input_text" value="<%= user.name%>">
+            <input placeholder="Updated Email" type="email" name="email"     class="input_text" value="<%= user.email%>">
+            <input placeholder="Updated Image URL" type="url" name="image"     class="input_text" value="<%= user.image%>">
+            <button type="submit">Update User</button>
+        </div>
+    </form>
+</body>
+</html>

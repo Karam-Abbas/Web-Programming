@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nothing New</title>
+  </head>
+  <body>
+    <div class="nav">
+      <a href="/" id="read">Back to Home</a>
+  </div>
+    <div class="main">
+      <p>All Users</p>
+      <div class="sub-2">
+        <% if(users.length>0){ %>
+        <% users.forEach((user)=>{ %>   
+            <div class="card">
+              <div class="img">
+                <img src="<%= user.image %>" alt="No image">
+              </div>
+              <div class="name"><%= user.name %></div>
+              <div class="mail"><%= user.email %></div>
+              <div class="btns">
+                <a href="/edit/<%= user._id %>" id="edit">Edit User</a>
+                <a href="/delete/<%= user._id %>" id="del">Delete User</a>
+              </div>
+              </div>
+              <% }) %>
+            <% }else{%>
+            <div class="no">No Users Yet</div>  
+          <% } %>
+    </div>
+  </body>
+</html>
