@@ -8,4 +8,5 @@ This is a mini web app made with the help of express, node, ejs, mongoDB and css
 <li>Add the update post feature</li>
 <li>mainting the info of user who liked the post</li>
 <li>Like count display</li>  
+<li>Added the functionaility to upload the files in the version v3.1</li>  
 </ul>
