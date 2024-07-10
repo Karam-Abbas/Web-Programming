@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/profile-style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="nav">
+        <div class="a"></div>
+       <a href="/logout" class="btn-red">Logout</a>
+    </div>
+    <h3><span class="text">Hi</span> , <%= user.name %> 👋</h3>
+    <h5>Create a new post </h5>
+    <form action="/post" method="post">
+        <textarea name="content" id="post" placeholder="What's on your mind...." rows=4 ></textarea><br>
+        <button type="submit" class="btn">Post</button>
+    </form>
+    <div class = "text-2">Your posts.</div>
+    <div class="posts">
+        <% user.posts.reverse().forEach((post)=>{%>
+        <div class="post">
+            <div class="header">
+                <span class="username">@<%= user.username%></span>
+            </div>
+            <div class="content">
+                <%= post.content%>
+            </div>
+            <div class="like"><%= post.likes.length%> Likes</div>
+            <div class="actions">
+                <a href="/like/<%= post._id %>" class="like-button"><%= (post.likes.indexOf(post.user)===-1 ? "Like" : "Unlike")%></a>
+                <a href="/edit/<%= post._id %>" class="edit-button">Edit</a>
+            </div>
+        </div>
+        <%})%>
+        </div>
+    </div>
+  </body>
+</html>
