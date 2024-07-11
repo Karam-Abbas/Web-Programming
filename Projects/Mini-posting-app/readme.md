@@ -8,5 +8,8 @@ This is a mini web app made with the help of express, node, ejs, mongoDB and css
 <li>Add the update post feature</li>
 <li>mainting the info of user who liked the post</li>
 <li>Like count display</li>  
-<li>Added the functionaility to upload the files in the version v3.1</li>  
+<li>Added the functionaility to upload the files in the version v3.1</li> 
+<li>Added the functionaility to upload profile picture of user</li>  
+<li>Displayed the profile picture alongside the greetings in the profile page</li>
+<li>New picture upload will overwrite the previous one and if no picture is present a default png from the database will be used as a placeholder</li>  
 </ul>
