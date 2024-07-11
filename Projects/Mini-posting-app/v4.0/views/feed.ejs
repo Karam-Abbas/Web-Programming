@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/profile-style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="nav">
+        <div class="a"></div>
+       <a href="/logout" class="btn-red">Logout</a>
+    </div>
+    <h5>All Posts </h5>
+    <% posts.forEach((post)=>{ %>
+        <div class="post">
+            <div class="header">
+                <span class="username">@<%= post.user%></span>
+            </div>
+            <div class="content">
+                <%= post.content%>
+            </div>
+            <div class="like"><%= post.likes.length%> Likes</div>
+            <div class="actions">
+                <a href="/like/<%= post._id %>" class="like-button"><%= (post.likes.indexOf(post.user)===-1 ? "Like" : "Unlike")%></a>
+                <a href="/edit/<%= post._id %>" class="edit-button">Edit</a>
+            </div>
+        </div>
+    <% })%>
+  </body>
+</html>
