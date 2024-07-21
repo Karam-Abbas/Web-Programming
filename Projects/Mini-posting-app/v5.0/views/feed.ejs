@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/profile-style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <h3>All Posts</h3>
+      <div class="nav">
+        <a href="/logout" class="btn-red">Logout</a>
+        <a href="/profile" class="btn-blue">My Profile</a>
+      </div>
+    </div>
+    <div class="all_posts">
+    <% posts.forEach((post)=>{ %>
+    <div class="post">
+      <div class="header">
+        <span class="username">@<%= post.user.username%></span>
+        <div class="time"><%= post.date.getDate()%>-<%= post.date.getMonth()%>-<%= post.date.getFullYear()%100 %> <span><%= post.date.getHours()%>:<%= post.date.getMinutes()%></span></div>
+      </div>
+      <div class="content"><%= post.content%></div>
+      <div class="like"><%= post.likes.length%> Likes</div>
+      <div class="actions">
+        <a href="/like/<%= post._id %>" class="like-button"
+          ><%= (post.likes.indexOf(post.user)===-1 ? "Like" : "Unlike")%></a
+        >
+        <a href="/edit/<%= post._id %>" class="edit-button">Edit</a>
+      </div>
+    </div>
+    <% })%>
+  </div>
+  </body>
+</html>
