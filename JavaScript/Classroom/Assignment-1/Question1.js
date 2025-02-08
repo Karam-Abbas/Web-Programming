@@ -19,8 +19,8 @@ function flattenArray(arr) {
   // Iterating over the array using the map()
   arr.map((element) => {
     typeof element === "object" // if condition
-      ? flattenArray(element) // if true
-      : flatArray.push(element); //  else
+      ? flattenArray(element) // if its an object go in recursion
+      : flatArray.push(element); //  else push in the ans array
   });
 }
 

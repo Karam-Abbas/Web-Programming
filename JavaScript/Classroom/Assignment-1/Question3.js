@@ -33,10 +33,13 @@ function createBankAccount(initial_deposit) {
   });
 }
 
-// testing
+// Main:
 let a = createBankAccount(10000);
 a.deposit(2000);
 a.withdraw(7000);
 console.log(a.getBalance());
 console.log(a.getHistory());
 a.getAccountSummary()
+a.resetAccount()
+console.log(a.getBalance());
+console.log(a.getHistory());
