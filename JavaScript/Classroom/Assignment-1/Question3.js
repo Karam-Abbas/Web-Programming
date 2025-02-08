@@ -24,7 +24,8 @@ function createBankAccount(initial_deposit) {
     // getAccountSummary: () => {
     //   console.log(`${this.balance}`);
     //   console.log(`${this.amount}`);
-    // },  // this doesn't work because the arrow function doesn't have its own this, it takes this of the outer lexical scope like in out case global scope. To fix this we will use simple function instead of  arrow function.
+    // },  
+    // this doesn't work because the arrow function doesn't have its own this, it takes this of the outer lexical scope like in out case global scope. To fix this we will use simple function instead of  arrow function.
     getAccountSummary:function(){
         console.log(`Balance: ${this.balance}`);
         console.log(`History: ${this.history}`);

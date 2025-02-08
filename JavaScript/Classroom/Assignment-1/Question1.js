@@ -11,7 +11,7 @@ let flatArray = [];
 //   }
 // }
 
-// tried the approach but it showed weird output like below
+// tried the above approach but it showed weird output like below
 // Array before:  [ [ 1, [ 2, [Array] ] ], 4, [ 5, [ 6, [Array] ] ] ]
 // Array after:  [ '0', '1', '2' ]
 
