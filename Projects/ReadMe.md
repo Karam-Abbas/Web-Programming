@@ -52,6 +52,12 @@ Once the environment variables are set, run your program as usual:
 node app.js  # Replace with your actual entry file
 ```
 
+Then go to the below link and see the app live.
+ 
+```bash
+https://localhost:3000/
+```
+
 ## Notes
 - These commands only set environment variables for the current session. If you restart your terminal, you'll need to run them again.
 - To make environment variables permanent, add the export commands to your shell profile (`~/.bashrc`, `~/.zshrc`, or `~/.bash_profile` for macOS/Linux) or set them permanently in Windows via the system settings.
